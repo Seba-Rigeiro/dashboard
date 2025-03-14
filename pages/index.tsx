@@ -7,6 +7,7 @@ import { useFilterState } from '../hooks/use-filter-state';
 import { useYearData } from '../hooks/use-year-data';
 import { ChartSection } from '../components/chart-section';
 import { TableSection } from '../components/table-section';
+import { ChartData } from '../entities/chart-data';
 
 const Home: NextPage = () => {
   const { data, isLoading } = useData();
@@ -41,7 +42,7 @@ const Home: NextPage = () => {
             selectedPeriod={selectedPeriod}
             ytdData={ytdData}
             ytgData={ytgData}
-            chartData={chartData}
+            chartData={chartData ?? ({} as ChartData)}
           />
         </Box>
         <Box>

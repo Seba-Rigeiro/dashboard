@@ -23,8 +23,8 @@ export const useYearData = () => {
   const { ytdData, ytgData } = data || {};
 
   return {
-    ytdData,
-    ytgData,
+    ytdData: ytdData || { values: [], labels: [], titles: [], colors: [] },
+    ytgData: ytgData || { values: [], labels: [], titles: [], colors: [] },
     isLoading,
     isError,
   };

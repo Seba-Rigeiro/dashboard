@@ -19,7 +19,7 @@ export const ChartSection: FC<ChartSectionProps> = ({
 }) => {
   return (
     <Box display="flex" gap={3} width="100%">
-      {selectedPeriod === 'YTD / YTG' && ytdData && ytgData ? (
+      {selectedPeriod === 'YTD / YTG' ? (
         <Box display="flex" gap={3} width="100%" height="450px">
           <Chart
             values={ytdData.values}
